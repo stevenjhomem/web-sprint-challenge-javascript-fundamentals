@@ -78,7 +78,7 @@ const zooAnimals = [
   }
 
   console.log(animalNames(zooAnimals));
-  
+  5
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -86,9 +86,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const newLowerCaseArray = array.map(animalInfo => animalInfo.animal_name.toLowerCase());
+    return newLowerCaseArray;
   }
+
+  console.log(lowerCaseNames(zooAnimals));
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
