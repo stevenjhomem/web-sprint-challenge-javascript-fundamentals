@@ -26,6 +26,12 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+My wife actually had a very good analogy to help us understand the difference between .map and .filter. Her example, which has become my own now as well, was as follows:
+
+.filter is very similar to looking at a book shelf that is filled with books and only wanting the books that are written by a certain author, say C.S. Lewis. The .filter method will scan through all of our books and decide which books have been written by C.S. Lewis and put them into your library cart in order for you to check them out. .filter may skip over some indices in our array if they do not pass the condition set forth. 
+
+.map will consider all of the books on the shelf and take someting or manipulate each of them according to some designated change we have told it to make. So, maybe I want to catalog every book I own on my shelf? .map would take every book title I have and put it into a new array for me. .map must go through every index in our array. 
+
 2. Explain the difference between a callback and a higher order function.
 
 3. Explain what a closure is.
