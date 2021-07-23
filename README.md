@@ -42,15 +42,17 @@ Closure occurs as soon we enter into a function. It is a good idea to think of f
 
 4. Describe the four principles of the 'this' keyword.
 
-(1)Global Binding - 
+(1) Global Binding - This is when we have no context for the this keyword, it attaches itself to the the context/object that it lives within, which will be the window/console object.
 
-(2) Implicit Binding - 
+(2) Implicit Binding - This is when we enter into an object, where we find ourselves in the object is actually a function, and within that function we have the keyword this, then the original object is "this". The original object is our context. 
 
-(3) New Binding - 
+(3) New Binding - In this situation, the this keyword is refering to the specific instance object that we are creating and calling by our constructor function. This new object is our context. 
 
-(4) Explicit Binding - 
+(4) Explicit Binding - with .call() and .apply() we are explicity passing in the object context for the this keyword. So, that is what this will mean in this context. 
 
 5. Why do we need super() in an extended class?
+
+The best/most concise explanation I have found about super() is that it is used to make sure we do not duplicate any of the constructor parts' that are common between the parent object and the child object. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
