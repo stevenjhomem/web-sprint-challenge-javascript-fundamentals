@@ -38,7 +38,17 @@ So, a higher order function is a function that returns another function while a 
 
 3. Explain what a closure is.
 
+Closure occurs as soon we enter into a function. It is a good idea to think of functions as little black boxes. A lot of things can happen inside of the black boxes but everything outside of the black box can't see or access what was created or defined inside of the blackbox unless the blackbox outputs information. However, everything in the blackbox has access to the scope outside of the blackbox. So, the blackbox has access to everything outside of it but everything outside of the blackbox does not have access to what is inside the blackbox. This is closure. 
+
 4. Describe the four principles of the 'this' keyword.
+
+(1)Global Binding - 
+
+(2) Implicit Binding - 
+
+(3) New Binding - 
+
+(4) Explicit Binding - 
 
 5. Why do we need super() in an extended class?
 
