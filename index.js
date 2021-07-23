@@ -1,3 +1,5 @@
+//Making changes to the document in order to sync with the codegrade tool on canvas//
+
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
@@ -15,11 +17,14 @@ function myFunction() {
 }
 myFunction();
 
-//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
+//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: So, it is best to read this code snippet from the end and read through it by the defined functions. Hence, we will begin by noticing that the function myFunction has been invoked. Since it is invoked, we then go inside the function to see what should happen next. Once inside the myFunction "blackbox" we see that our first order of business is to console.log the value given to the variable "external", which can be done because external is a global variable and we are able to reach out of the functional blackbox to retrieve information. And we notice that this indeed has been done first in our terminal.
 
+//Then we see that we have a new variable, internal, assigned, within the functional blackbox of myFunction, but is is not being used. 
 
+//After this, we notice that we have a new, nested, function defined called nestedFunction. 
 
-
+//After this new function has been defined, we see that this function is now invoked. Hence, we loop back around and see what this function will be doing next. Once inside of the nestedFunction blackbox, we notice that we will be reaching out and pulling in the information from "internal" and console.logging that information. This is okay to do because we can always reach out of our functional blackbox but we can never reach into a nested functions blackbox from the outisde. A closure has been created at the creation of our nested function. nestedFunction has access to the outer function's scope. 
+  
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -27,12 +32,19 @@ myFunction();
     2. Use a counter to return the summation of that number. 
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
+  
+function summation(number) {
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+  let sum = 0;
 
+  for(let i=0; i<=number; i++){
+    sum = sum +i;
   }
- 
+
+  return sum;
+}
+
+console.log(summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -56,9 +68,16 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+
+    const displayNames = [];
+
+    array.forEach((animalInfo) => displayNames.push(`name: ${animalInfo.animal_name}, scientific: ${animalInfo.scientific_name}`));
+
+    return displayNames;
   }
+
+  console.log(animalNames(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
